@@ -922,6 +922,15 @@ h1 {
     transform: translateY(-2px);
 }
 
+.social-link svg {
+    fill: currentColor;
+    vertical-align: middle;
+}
+
+.social-link:hover svg {
+    fill: white;
+}
+
 .contact-form {
     width: 100%;
     max-width: 500px;
