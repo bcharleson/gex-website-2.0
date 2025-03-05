@@ -878,134 +878,62 @@ h1 {
     line-height: 1.6;
 }
 
-/* Contact Section */
-.contact {
-    background: linear-gradient(180deg, var(--color-background) 0%, #0D1117 100%);
-    padding: 3rem 0;
-}
-
-.contact-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 3rem;
-    margin-top: 3rem;
-}
-
-.contact-info {
-    color: var(--color-text-muted);
-    line-height: 1.7;
-}
-
-.contact-info p {
-    margin-bottom: 1.5rem;
-}
-
-.social-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.social-link {
-    color: var(--color-text);
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    background-color: var(--color-card-bg);
-    border-radius: var(--radius-sm);
-    transition: all 0.3s ease;
-    border: 1px solid var(--color-border);
-}
-
-.social-link:hover {
-    background-color: var(--color-primary);
-    box-shadow: 0 0 15px var(--color-primary-glow);
-    transform: translateY(-2px);
-}
-
-.social-link svg {
-    fill: currentColor;
-    vertical-align: middle;
-}
-
-.social-link:hover svg {
-    fill: white;
-}
-
-.contact-form {
-    width: 100%;
-    max-width: 500px;
-}
-
-.form-group {
-    margin-bottom: 1.2rem;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.8rem 1rem;
-    border-radius: var(--radius-sm);
-    background-color: var(--color-card-bg);
-    border: 1px solid var(--color-border);
-    color: var(--color-text);
-    font-family: 'Inter', sans-serif;
-    transition: all 0.2s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--color-primary);
-    box-shadow: 0 0 10px rgba(92, 199, 192, 0.3);
-}
-
-.submit-btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--color-primary);
-    color: #000;
-    border: none;
-    border-radius: var(--radius-sm);
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.submit-btn:hover {
-    transform: translateY(-2px);
-    background-color: #5de284;
-}
-
 /* Footer */
 footer {
-    background-color: #0a0d12;
-    padding: 1.5rem 0;
-    border-top: 1px solid var(--color-border);
+    background-color: #000;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 footer .container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    gap: 2rem;
 }
 
 footer p {
     color: var(--color-text-muted);
+    margin: 0;
+    font-size: 0.9rem;
 }
 
-.footer-links {
+footer .social-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
+    margin: 0;
 }
 
-.footer-links a {
-    color: var(--color-text-muted);
+footer .social-link {
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    transition: color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.footer-links a:hover {
-    color: var(--color-primary);
+footer .social-link:hover {
+    background-color: var(--color-primary);
+    color: #000;
+    transform: translateY(-2px);
+}
+
+footer .social-link svg {
+    fill: currentColor;
+    width: 18px;
+    height: 18px;
+}
+
+footer .social-link:hover svg {
+    fill: #000;
 }
 
 /* Responsive Styles */
@@ -2101,5 +2029,40 @@ img[src*="forbes.webp"].partner-logo {
 
 .methodology.step-3.visible .comparison-column:nth-child(2) {
     animation-delay: 0.2s;
-} 
+}
+
+/* Social links - Used in footer */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 0.5rem;
+    background-color: var(--color-card-bg);
+    border-radius: var(--radius-sm);
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+}
+
+.social-link:hover {
+    background-color: var(--color-primary);
+    box-shadow: 0 0 15px var(--color-primary-glow);
+    transform: translateY(-2px);
+}
+
+.social-link svg {
+    fill: currentColor;
+}
+
+.social-link:hover svg {
+    fill: white;
 } 
