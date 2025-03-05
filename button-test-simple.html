@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Test (No Rive)</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .button-container {
+            margin: 20px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        
+        .header-section, .hero-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .get-started-btn {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            background-color: #6FF394;
+            color: #000;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(111, 243, 148, 0.7);
+            z-index: 10;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .get-started-btn:hover {
+            background-color: #5ad370;
+            box-shadow: 0 0 15px rgba(111, 243, 148, 0.9);
+            transform: translateY(-2px);
+        }
+        
+        #nav-button-animation, #hero-button-animation {
+            position: relative;
+            display: inline-block;
+            width: 150px;
+            height: 40px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Button Test (Without Rive Animations)</h1>
+    
+    <div class="header-section">
+        <h2>Navigation Button</h2>
+        <div id="nav-button-animation">
+            <a href="#" class="get-started-btn">Work With Us</a>
+        </div>
+    </div>
+    
+    <div class="hero-section">
+        <h2>Hero Button</h2>
+        <div id="hero-button-animation">
+            <a href="#" class="get-started-btn">Work With Us</a>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Page loaded. Testing buttons without Rive.');
+            
+            // Add hover effects manually
+            document.querySelectorAll('.get-started-btn').forEach(btn => {
+                btn.addEventListener('mouseenter', () => {
+                    btn.style.backgroundColor = '#5ad370';
+                    btn.style.boxShadow = '0 0 15px rgba(111, 243, 148, 0.9)';
+                    btn.style.transform = 'translateY(-2px)';
+                });
+                
+                btn.addEventListener('mouseleave', () => {
+                    btn.style.backgroundColor = '#6FF394';
+                    btn.style.boxShadow = '0 0 10px rgba(111, 243, 148, 0.7)';
+                    btn.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

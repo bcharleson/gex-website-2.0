@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rive Button Test</title>
+    <script src="https://unpkg.com/@rive-app/canvas@1.0.98"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            margin-bottom: 40px;
+        }
+        
+        .button-container {
+            position: relative;
+            width: 200px;
+            height: 60px;
+            margin: 20px;
+        }
+        
+        .button-label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            font-weight: bold;
+            pointer-events: none;
+            z-index: 10;
+        }
+        
+        .status {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #242424;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rive Button Animation Test</h1>
+    
+    <div class="button-container" id="test-button">
+        <div class="button-label">Work With Us</div>
+    </div>
+    
+    <div class="status" id="status-log">
+        <p>Checking Rive animation setup...</p>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const statusLog = document.getElementById('status-log');
+            
+            // Log function
+            function log(message) {
+                const p = document.createElement('p');
+                p.textContent = message;
+                statusLog.appendChild(p);
+                console.log(message);
+            }
+            
+            // Check if Rive is loaded
+            if (typeof rive === 'undefined') {
+                log('❌ Rive library not loaded correctly');
+            } else {
+                log('✅ Rive library loaded successfully');
+                
+                // Check if we can access the test button element
+                const buttonElement = document.getElementById('test-button');
+                if (!buttonElement) {
+                    log('❌ Button container not found');
+                } else {
+                    log('✅ Button container found');
+                    
+                    // Try to initialize a simple animation
+                    try {
+                        // List of possible Rive files to test
+                        const possibleFiles = [
+                            'assets/animations/button.riv',
+                            'assets/animations/glowing_button.riv'
+                        ];
+                        
+                        let fileFound = false;
+                        
+                        // Function to try loading a Rive file
+                        function tryLoadRiveFile(filepath) {
+                            log(`Attempting to load Rive file: ${filepath}`);
+                            
+                            const riveInstance = new rive.Rive({
+                                src: filepath,
+                                canvas: buttonElement,
+                                autoplay: true,
+                                onLoad: () => {
+                                    log(`✅ Successfully loaded Rive file: ${filepath}`);
+                                    fileFound = true;
+                                    
+                                    // Try to find state machine inputs
+                                    try {
+                                        const stateMachines = riveInstance.stateMachineNames;
+                                        log(`Found state machines: ${stateMachines.join(', ')}`);
+                                        
+                                        if (stateMachines.length > 0) {
+                                            const inputs = riveInstance.stateMachineInputs(stateMachines[0]);
+                                            log(`Found inputs for "${stateMachines[0]}": ${inputs.map(i => i.name).join(', ')}`);
+                                        }
+                                    } catch (err) {
+                                        log(`⚠️ Could not check state machines: ${err.message}`);
+                                    }
+                                },
+                                onLoadError: (err) => {
+                                    log(`❌ Failed to load ${filepath}: ${err}`);
+                                    
+                                    // Try the next file if available
+                                    const nextIndex = possibleFiles.indexOf(filepath) + 1;
+                                    if (nextIndex < possibleFiles.length && !fileFound) {
+                                        tryLoadRiveFile(possibleFiles[nextIndex]);
+                                    } else if (!fileFound) {
+                                        log('❌ Could not find any valid Rive animation files');
+                                    }
+                                }
+                            });
+                        }
+                        
+                        // Start trying to load the first file
+                        tryLoadRiveFile(possibleFiles[0]);
+                        
+                    } catch (error) {
+                        log(`❌ Error initializing Rive: ${error.message}`);
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html> 

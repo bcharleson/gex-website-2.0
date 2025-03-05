@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth Engine X - Data-Driven Growth for SaaS</title>
+    <link rel="stylesheet" href="growthengine.css">
+    <link rel="stylesheet" href="assets/animations/rive-animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Rive Runtime -->
+    <script src="https://unpkg.com/@rive-app/canvas@1.0.98"></script>
+    <!-- Site Scripts -->
+    <script src="growthengine.js" defer></script>
+    <script src="assets/animations/rive-init.js" defer></script>
+</head>
+<body>
+    <!-- Variable declaration fix script -->
+    <script>
+        // Prevent duplicate TerminalCanvas declarations
+        window.TerminalCanvas = window.TerminalCanvas || {};
+    </script>
+    
+    <div class="wrapper">
+        <header>
+            <div class="header-container">
+                <a href="#" class="logo">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 2C7.83 2 2 7.83 2 15C2 22.17 7.83 28 15 28C22.17 28 28 22.17 28 15C28 7.83 22.17 2 15 2ZM15 6C17.49 6 19.5 8.01 19.5 10.5C19.5 12.99 17.49 15 15 15C12.51 15 10.5 12.99 10.5 10.5C10.5 8.01 12.51 6 15 6ZM15 25.8C11.93 25.8 9.19 24.26 7.5 21.87C7.56 18.93 13.5 17.35 15 17.35C16.49 17.35 22.44 18.93 22.5 21.87C20.81 24.26 18.07 25.8 15 25.8Z" fill="#6FF394"/>
+                    </svg>
+                    <span style="font-weight: 900; font-size: 1.3rem; margin-left: 0.5rem; color: #FFFFFF; text-shadow: 0 0 5px rgba(255,255,255,0.2); letter-spacing: -0.02em;">Growth Engine X</span>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#methodology">Methodology</a></li>
+                        <li><a href="#case-studies">Case Studies</a></li>
+                        <li><a href="https://www.youtube.com/channel/UC6ef5yDFz7gm8rARwX3HaDw" target="_blank" class="star-link">
+                            Free Trainings
+                        </a></li>
+                        <li>
+                            <!-- Button with forced visibility -->
+                            <div id="nav-button-animation" style="display: inline-block !important;">
+                                <a href="https://tally.so/r/meK550" class="get-started-btn" style="display: inline-flex !important; opacity: 1 !important; visibility: visible !important; background-color: #6FF394 !important;">
+                                    Work With Us
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="hero-background">
+                <img src="images/hero-bg.png" alt="Background">
+            </div>
+            
+            <div class="hero-content-wrapper">
+                <div class="hero-content" style="margin-top: 2rem;">
+                    <h1 style="color: #FFFFFF; font-weight: 800; text-shadow: 0 0 10px rgba(255,255,255,0.3), 0 0 20px rgba(255,255,255,0.2); letter-spacing: -0.02em;">Your Prospects Don't Reply Because You Have Nothing Good To Say</h1>
+                    <p class="hero-subheadline" style="color: rgba(255,255,255,0.8); font-size: 1.25rem; line-height: 1.5; margin-top: 1.5rem; max-width: 800px;">The problem with most outbound motions is that teams are identifying a basic Ideal Customer Profile and using the same message with all of them. There's a much better way...</p>
+                </div>
+                
+                <div class="terminal-notifications" style="margin-top: 60px;">
+                    <div class="terminal-card" data-hint="Average increase in prospect responses">
+                        <div class="terminal-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 3C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H5Z" stroke="#5CC7C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7 9L11 13L7 17" stroke="#5CC7C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13 17H17" stroke="#5CC7C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="terminal-text">
+                            +125% conversion rate
+                        </div>
+                    </div>
+                    
+                    <div class="terminal-card" data-hint="Ready to deploy in 24 hours">
+                        <div class="terminal-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#5CC7C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 12L11 14L15 10" stroke="#5CC7C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="terminal-text">
+                            growth pipeline ready
+                        </div>
+                    </div>
+                    
+                    <div class="terminal-card" data-hint="Proven strategies across industries">
+                        <div class="terminal-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 7H4C2.89543 7 2 7.89543 2 9V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V9C22 7.89543 21.1046 7 20 7Z" stroke="#5CC7C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 21V5C16 3.89543 15.1046 3 14 3H10C8.89543 3 8 3.89543 8 5V21" stroke="#5CC7C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="terminal-text">
+                            200+ growth experiments
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tagline-container" style="margin-top: 1rem;">
+                <div class="get-started-container">
+                    <!-- Hero section button with forced visibility -->
+                    <div id="hero-button-animation" style="display: inline-block !important; margin: 10px auto;">
+                        <a href="https://tally.so/r/meK550" class="get-started-btn" style="display: inline-flex !important; opacity: 1 !important; visibility: visible !important; background-color: #6FF394 !important;">
+                            Work With Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="company-section">
+                <p>The world's best SaaS companies trust Growth Engine X</p>
+                <div class="partners-banner-container">
+                    <div class="partners-banner">
+                        <div class="scrolling-content">
+                            <!-- First set of logos -->
+                            <div class="partner-item">
+                                <img src="images/partners/instantly.png" alt="Instantly.ai" class="partner-logo">
+                            </div>
+                            <div class="partner-item">
+                                <img src="images/partners/clay.png" alt="Clay" class="partner-logo">
+                            </div>
+                            <div class="partner-item">
+                                <img src="images/partners/secureframe.png" alt="Secureframe" class="partner-logo">
+                            </div>
+                            <div class="partner-item">
+                                <img src="images/partners/testbox.png" alt="Website Closers" class="partner-logo">
+                            </div>
+                            <div class="partner-item">
+                                <img src="images/partners/forbes.webp" alt="Forbes" class="partner-logo">
+                            </div>
+                            <!-- Duplicate set for seamless scrolling -->
+                            <div class="partner-item">
+                                <img src="images/partners/instantly.png" alt="Instantly.ai" class="partner-logo">
+                            </div>
+                            <div class="partner-item">
+                                <img src="images/partners/clay.png" alt="Clay" class="partner-logo">
+                            </div>
+                            <div class="partner-item">
+                                <img src="images/partners/secureframe.png" alt="Secureframe" class="partner-logo">
+                            </div>
+                            <div class="partner-item">
+                                <img src="images/partners/testbox.png" alt="Website Closers" class="partner-logo">
+                            </div>
+                            <div class="partner-item">
+                                <img src="images/partners/forbes.webp" alt="Forbes" class="partner-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="stats-card">
+                <div class="stats-header">
+                    <img src="images/partners/clay1.webp" alt="Data Icon" class="stats-icon">
+                    <span>We pride ourselves in being the largest Clay user on the platform by usage to serve our clients.</span>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="322888913">0</div>
+                        <div class="stat-label">CELLS</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="12742">0</div>
+                        <div class="stat-label">COLUMNS</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="247">0</div>
+                        <div class="stat-label">ENRICHMENTS</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2021</div>
+                        <div class="stat-label">GROWTH EXPERTS SINCE</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Exactly What We Do</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 4L3 11L10 14L13 21L20 4Z" stroke="#5CC7C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Build</h3>
+                        <p>We create custom cold email campaigns tailored to your specific business and industry to drive consistent, predictable results.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M16 4H8V20H16V4Z" stroke="#5CC7C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4 7H8" stroke="#5CC7C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4 12H8" stroke="#5CC7C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4 17H8" stroke="#5CC7C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 7H20" stroke="#5CC7C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 12H20" stroke="#5CC7C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 17H20" stroke="#5CC7C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Test</h3>
+                        <p>We set up campaigns where we consult and craft creative copy using email sending platforms to ensure your messages connect with prospects and stay out of spam.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z" stroke="#5CC7C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 16L12 12" stroke="#5CC7C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 8L12.01 8" stroke="#5CC7C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Automate</h3>
+                        <p>We scale your campaigns to reach your entire addressable market. Currently sending 1.5 million targeted emails per month for our clients with consistently high deliverability.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="methodology" class="methodology">
+            <div class="container">
+                <h2>Outbound Methodology Explained</h2>
+                
+                <h3 class="step-title">Step 1: Bypass Spam Filters</h3>
+                
+                <div class="methodology-comparison">
+                    <div class="comparison-image">
+                        <!-- Using an SVG illustration instead of requiring an external image file -->
+                        <svg width="600" height="300" viewBox="0 0 600 300" class="methodology-diagram">
+                            <!-- Gradient background -->
+                            <defs>
+                                <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#0a0a0a" />
+                                    <stop offset="100%" stop-color="#1a1a1a" />
+                                </linearGradient>
+                                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feGaussianBlur stdDeviation="5" result="blur" />
+                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                </filter>
+                                <!-- Animation for the path -->
+                                <path id="mainPath" d="M 350 150 C 400 150, 430 100, 460 100" />
+                            </defs>
+                            
+                            <!-- Background rectangle with gradient -->
+                            <rect width="600" height="300" fill="url(#bgGradient)" rx="12" ry="12" />
+                            
+                            <!-- Grid lines for depth -->
+                            <g stroke="#222" stroke-width="0.5">
+                                <line x1="0" y1="75" x2="600" y2="75" />
+                                <line x1="0" y1="225" x2="600" y2="225" />
+                                <line x1="150" y1="0" x2="150" y2="300" />
+                                <line x1="300" y1="0" x2="300" y2="300" />
+                                <line x1="450" y1="0" x2="450" y2="300" />
+                            </g>
+                            
+                            <!-- Main text line -->
+                            <line x1="50" y1="150" x2="550" y2="150" stroke="#333" stroke-width="2" />
+                            
+                            <!-- Text at the top -->
+                            <text x="300" y="50" fill="#ffffff" font-size="14" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold">IF YOU WANT TO BE WRONG THEN FOLLOW THE MASSES.</text>
+                            
+                            <!-- Red dot (start point) with glow -->
+                            <circle cx="100" cy="150" r="8" fill="#ff5555" filter="url(#glow)" />
+                            <circle cx="100" cy="150" r="12" fill="#ff5555" opacity="0.3">
+                                <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite" />
+                                <animate attributeName="opacity" values="0.3;0.1;0.3" dur="2s" repeatCount="indefinite" />
+                            </circle>
+                            
+                            <!-- White dots in a line (following the masses) -->
+                            <g fill="white" opacity="0.8">
+                                <circle cx="150" cy="150" r="5" />
+                                <circle cx="170" cy="150" r="5" />
+                                <circle cx="190" cy="150" r="5" />
+                                <circle cx="210" cy="150" r="5" />
+                                <circle cx="230" cy="150" r="5" />
+                                <circle cx="250" cy="150" r="5" />
+                                <circle cx="270" cy="150" r="5" />
+                                <circle cx="290" cy="150" r="5" />
+                                <circle cx="310" cy="150" r="5" />
+                                <circle cx="330" cy="150" r="5" />
+                            </g>
+                            
+                            <!-- Path diverging (the differentiated approach) with animation -->
+                            <path d="M 350 150 L 400 150 L 400 210" stroke="#5CC7C0" stroke-width="2" fill="none" stroke-dasharray="5,3">
+                                <animate attributeName="stroke-dashoffset" from="8" to="0" dur="2s" repeatCount="indefinite" />
+                            </path>
+                            
+                            <!-- Final teal dots (falling off cliff) with enhanced falling animation -->
+                            <g fill="#5CC7C0" filter="url(#glow)">
+                                <!-- First dot at the cliff edge -->
+                                <circle cx="400" cy="150" r="6">
+                                    <animate attributeName="r" values="6;7;6" dur="2s" repeatCount="indefinite" begin="0s" />
+                                    <animate attributeName="cy" values="150;152;150" dur="1.2s" repeatCount="indefinite" begin="0s" />
+                                    <animate attributeName="cx" values="400;398;400" dur="1.2s" repeatCount="indefinite" begin="0s" />
+                                </circle>
+                                
+                                <!-- Second dot just starting to fall -->
+                                <circle cx="400" cy="175" r="6">
+                                    <animate attributeName="r" values="6;7;6" dur="1.8s" repeatCount="indefinite" begin="0.3s" />
+                                    <animate attributeName="cy" values="175;190;175" dur="1.8s" repeatCount="indefinite" begin="0.3s" />
+                                    <animate attributeName="cx" values="400;402;400" dur="1.8s" repeatCount="indefinite" begin="0.3s" />
+                                    <animate attributeName="opacity" values="1;0.9;1" dur="1.8s" repeatCount="indefinite" begin="0.3s" />
+                                </circle>
+                                
+                                <!-- Third dot falling more -->
+                                <circle cx="400" cy="210" r="5.5">
+                                    <animate attributeName="r" values="5.5;6.5;5.5" dur="1.6s" repeatCount="indefinite" begin="0.6s" />
+                                    <animate attributeName="cy" values="210;240;210" dur="2s" repeatCount="indefinite" begin="0.6s" />
+                                    <animate attributeName="cx" values="400;405;400" dur="2s" repeatCount="indefinite" begin="0.6s" />
+                                    <animate attributeName="opacity" values="1;0.8;1" dur="2s" repeatCount="indefinite" begin="0.6s" />
+                                </circle>
+                                
+                                <!-- Fourth dot falling with dramatic acceleration -->
+                                <circle cx="400" cy="250" r="5">
+                                    <animate attributeName="r" values="5;6;5" dur="1.5s" repeatCount="indefinite" begin="0.9s" />
+                                    <animate attributeName="cy" values="250;290;250" dur="2.2s" repeatCount="indefinite" begin="0.9s" />
+                                    <animate attributeName="cx" values="400;410;400" dur="2.2s" repeatCount="indefinite" begin="0.9s" />
+                                    <animate attributeName="opacity" values="1;0.7;1" dur="2.2s" repeatCount="indefinite" begin="0.9s" />
+                                </circle>
+                                
+                                <!-- Fifth dot (almost disappeared at bottom) -->
+                                <circle cx="400" cy="290" r="4.5">
+                                    <animate attributeName="r" values="4.5;5.5;4.5" dur="1.5s" repeatCount="indefinite" begin="1.2s" />
+                                    <animate attributeName="cy" values="290;340;290" dur="2.5s" repeatCount="indefinite" begin="1.2s" />
+                                    <animate attributeName="cx" values="400;415;400" dur="2.5s" repeatCount="indefinite" begin="1.2s" />
+                                    <animate attributeName="opacity" values="0.9;0.5;0.9" dur="2.5s" repeatCount="indefinite" begin="1.2s" />
+                                </circle>
+                            </g>
+                        </svg>
+                    </div>
+                    
+                    <div class="comparison-columns">
+                        <div class="comparison-column past">
+                            <h4>Cold Email in the Past</h4>
+                            <p>In 2014, a company could have seen results in a cold email campaign by buying a list of prospects, adding them to a Mailchimp HTML campaign, and send out an email blast with a {{First Name}} custom variable and stay busy with the leads that rolled in.</p>
+                            
+                            <p>In 2016, large marketing SMTPs like Mailchimp started cracking down and throttling your reach if you did this. No matter. You could still load up prospects into an Excel sheet and mail merge them into your Outlook account and send emails automatically.</p>
+                            
+                            <p>In 2020, the need for a Sales Engagement tool took over the market. Although it was founded in 2014, Outreach.io made huge strives when Covid-19 hit and the world needed so send far more emails.</p>
+                            
+                            <p>This has created increasingly diminishing returns because of the hammering of the domain reputation that using multiple inboxes on one domain causes.</p>
+                        </div>
+                        
+                        <div class="comparison-column today">
+                            <h4>Cold Email Today</h4>
+                            <p>Today, in order to optimize for delivery into your prospects inbox, it's a scientific endeavor. MX, SPF, DKIM, and DMARC records need to be aligned and validated on the DNS.</p>
+                            
+                            <p>Each inbox that you create needs to be on a domain that is completely separate from the main domain to keep all live communication and opted-in marketing email out of the spam box.</p>
+                            
+                            <p>The inboxes need to join a warmup pool of others that are evading the spam filters in order to fake engagement. Artificial Intelligence is needed to send messages back and forth that make Google believe it's real traffic.</p>
+                            
+                            <p>One day, 100% unique emails will probably need to be sent in order to evade the spam filters. Luckily we aren't there yet.</p>
+                            
+                            <p>Growth Engine X manages and advises on these processes for all of our clients and partners in order to ensure optimized inbox placement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Adding Step 2 of the Methodology -->
+        <section class="methodology step-2">
+            <div class="container">
+                <h3 class="step-title">Step 2: Identify your Ideal Customer Profile</h3>
+                
+                <div class="icp-visualization">
+                    <!-- Enhanced ICP Circles Visualization SVG with bullseye target layout -->
+                    <svg width="400" height="400" viewBox="0 0 400 400" class="icp-diagram">
+                        <defs>
+                            <linearGradient id="icpBgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#000000" />
+                                <stop offset="100%" stop-color="#111111" />
+                            </linearGradient>
+                            <radialGradient id="targetGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                                <stop offset="0%" stop-color="#111111" stop-opacity="0.8" />
+                                <stop offset="100%" stop-color="#000000" stop-opacity="1" />
+                            </radialGradient>
+                            <filter id="icpGlow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="3" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                            <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="0.3" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                            <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#000" flood-opacity="0.5"/>
+                            </filter>
+                            <!-- Add pulse animation -->
+                            <radialGradient id="pulseGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                                <stop offset="0%" stop-color="#5CC7C0" stop-opacity="0.5">
+                                    <animate attributeName="stop-opacity" values="0.5;0.2;0.5" dur="4s" repeatCount="indefinite"/>
+                                </stop>
+                                <stop offset="100%" stop-color="#5CC7C0" stop-opacity="0">
+                                    <animate attributeName="stop-opacity" values="0;0.1;0" dur="4s" repeatCount="indefinite"/>
+                                </stop>
+                            </radialGradient>
+                            <!-- Add shimmer effect -->
+                            <linearGradient id="shimmerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#5CC7C0" stop-opacity="0">
+                                    <animate attributeName="offset" values="0;1" dur="3s" repeatCount="indefinite"/>
+                                </stop>
+                                <stop offset="20%" stop-color="#5CC7C0" stop-opacity="0.5">
+                                    <animate attributeName="offset" values="0.2;1.2" dur="3s" repeatCount="indefinite"/>
+                                </stop>
+                                <stop offset="40%" stop-color="#5CC7C0" stop-opacity="0">
+                                    <animate attributeName="offset" values="0.4;1.4" dur="3s" repeatCount="indefinite"/>
+                                </stop>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Background circle with gradient -->
+                        <circle cx="200" cy="200" r="185" fill="url(#targetGradient)" opacity="0.9" filter="url(#softShadow)">
+                            <animate attributeName="opacity" values="0.9;0.95;0.9" dur="8s" repeatCount="indefinite" />
+                        </circle>
+                        
+                        <!-- Universe of All Companies - outer circle -->
+                        <circle cx="200" cy="200" r="185" fill="#000" stroke="#fff" stroke-width="1.5" opacity="0.9" class="outer-circle">
+                            <animate attributeName="stroke-opacity" values="0.7;0.9;0.7" dur="8s" repeatCount="indefinite" />
+                        </circle>
+                        
+                        <text x="200" y="75" fill="#fff" font-size="14" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" class="outer-text">
+                            Universe of All Companies
+                            <animate attributeName="opacity" values="0.8;1;0.8" dur="6s" repeatCount="indefinite" />
+                        </text>
+                        
+                        <!-- High-Level ICP - middle circle, slightly offset -->
+                        <circle cx="200" cy="220" r="135" fill="#000" stroke="#fff" stroke-width="1.5" opacity="0.95" class="middle-circle">
+                            <animate attributeName="stroke-opacity" values="0.7;1;0.7" dur="7s" repeatCount="indefinite" />
+                        </circle>
+                        
+                        <text x="200" y="140" fill="#fff" font-size="14" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" class="middle-text">
+                            High-Level ICP
+                            <animate attributeName="opacity" values="0.9;1;0.9" dur="5s" repeatCount="indefinite" />
+                        </text>
+                        <text x="200" y="160" fill="rgba(255, 255, 255, 0.8)" font-size="12" text-anchor="middle" font-family="Inter, sans-serif">
+                            (e.g. Tech companies >
+                        </text>
+                        <text x="200" y="175" fill="rgba(255, 255, 255, 0.8)" font-size="12" text-anchor="middle" font-family="Inter, sans-serif">
+                            50 Employees in the US)
+                        </text>
+                        
+                        <!-- Golden ICP - inner circle (bullseye), offset from center -->
+                        <circle cx="200" cy="265" r="75" fill="#000" stroke="#5CC7C0" stroke-width="2" filter="url(#icpGlow)" class="inner-circle">
+                            <animate attributeName="r" values="75;77;75" dur="4s" repeatCount="indefinite" />
+                            <animate attributeName="stroke-opacity" values="0.8;1;0.8" dur="4s" repeatCount="indefinite" />
+                            <animate attributeName="stroke-width" values="2;2.5;2" dur="4s" repeatCount="indefinite" />
+                        </circle>
+                        
+                        <!-- Add pulse effect behind inner circle -->
+                        <circle cx="200" cy="265" r="85" fill="url(#pulseGradient)" opacity="0.3" class="pulse-effect">
+                            <animate attributeName="r" values="78;88;78" dur="4s" repeatCount="indefinite" />
+                        </circle>
+                        
+                        <text x="200" y="235" fill="#5CC7C0" font-size="14" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" class="inner-text" filter="url(#textGlow)">
+                            Golden ICP
+                            <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite" />
+                        </text>
+                        <text x="200" y="255" fill="rgba(255, 255, 255, 0.8)" font-size="12" text-anchor="middle" font-family="Inter, sans-serif">
+                            e.g. companies that
+                        </text>
+                        <text x="200" y="272" fill="rgba(255, 255, 255, 0.8)" font-size="12" text-anchor="middle" font-family="Inter, sans-serif">
+                            need import
+                        </text>
+                        <text x="200" y="289" fill="rgba(255, 255, 255, 0.8)" font-size="12" text-anchor="middle" font-family="Inter, sans-serif">
+                            functionality into their
+                        </text>
+                        <text x="200" y="306" fill="rgba(255, 255, 255, 0.8)" font-size="12" text-anchor="middle" font-family="Inter, sans-serif">
+                            tools
+                        </text>
+                        
+                        <!-- Target crosshair elements with shimmer effect -->
+                        <line x1="190" y1="265" x2="210" y2="265" stroke="#5CC7C0" stroke-width="0.5" opacity="0.6">
+                            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="6s" repeatCount="indefinite" />
+                        </line>
+                        <line x1="200" y1="250" x2="200" y2="270" stroke="#5CC7C0" stroke-width="0.5" opacity="0.6">
+                            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="6s" repeatCount="indefinite" />
+                        </line>
+                        
+                        <!-- Add shimmer line across inner circle -->
+                        <line x1="140" y1="265" x2="260" y2="265" stroke="url(#shimmerGradient)" stroke-width="1.5" opacity="0.5" />
+                        
+                        <!-- Decorative rings and elements -->
+                        <circle cx="200" cy="265" r="83" fill="none" stroke="#5CC7C0" stroke-width="0.3" opacity="0.3" stroke-dasharray="2,3">
+                            <animate attributeName="r" values="83;85;83" dur="10s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" values="0.2;0.5;0.2" dur="8s" repeatCount="indefinite" />
+                        </circle>
+                        
+                        <circle cx="200" cy="265" r="90" fill="none" stroke="#5CC7C0" stroke-width="0.2" opacity="0.2" stroke-dasharray="1,4">
+                            <animate attributeName="r" values="90;93;90" dur="12s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" values="0.1;0.4;0.1" dur="10s" repeatCount="indefinite" />
+                        </circle>
+                        
+                        <!-- Enhanced decorative elements with random movement -->
+                        <g fill="#5CC7C0" opacity="0.4">
+                            <circle cx="160" cy="150" r="2.5" class="floating-particle">
+                                <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite" begin="0.5s" />
+                                <animate attributeName="cx" values="160;165;160" dur="15s" repeatCount="indefinite" />
+                                <animate attributeName="cy" values="150;145;150" dur="17s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="250" cy="160" r="2" class="floating-particle">
+                                <animate attributeName="opacity" values="0.2;0.6;0.2" dur="4s" repeatCount="indefinite" begin="1s" />
+                                <animate attributeName="cx" values="250;245;250" dur="18s" repeatCount="indefinite" />
+                                <animate attributeName="cy" values="160;165;160" dur="20s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="175" cy="240" r="1.5" class="floating-particle">
+                                <animate attributeName="opacity" values="0.2;0.5;0.2" dur="5s" repeatCount="indefinite" begin="1.5s" />
+                                <animate attributeName="cx" values="175;180;175" dur="20s" repeatCount="indefinite" />
+                                <animate attributeName="cy" values="240;235;240" dur="22s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="270" cy="220" r="2" class="floating-particle">
+                                <animate attributeName="opacity" values="0.3;0.6;0.3" dur="4s" repeatCount="indefinite" begin="2s" />
+                                <animate attributeName="cx" values="270;265;270" dur="25s" repeatCount="indefinite" />
+                                <animate attributeName="cy" values="220;225;220" dur="23s" repeatCount="indefinite" />
+                            </circle>
+                            <!-- Add a few more floating particles -->
+                            <circle cx="190" cy="120" r="1.8" class="floating-particle">
+                                <animate attributeName="opacity" values="0.2;0.5;0.2" dur="5s" repeatCount="indefinite" begin="0s" />
+                                <animate attributeName="cx" values="190;195;190" dur="19s" repeatCount="indefinite" />
+                                <animate attributeName="cy" values="120;125;120" dur="21s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="230" cy="280" r="1.5" class="floating-particle">
+                                <animate attributeName="opacity" values="0.2;0.5;0.2" dur="4s" repeatCount="indefinite" begin="2.5s" />
+                                <animate attributeName="cx" values="230;235;230" dur="22s" repeatCount="indefinite" />
+                                <animate attributeName="cy" values="280;275;280" dur="24s" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+                    </svg>
+                </div>
+                
+                <div class="methodology-comparison">
+                    <div class="comparison-columns">
+                        <div class="comparison-column past">
+                            <h4>Building Lists in the Past</h4>
+                            <p>In the past, buyers only had access to the information that was presented to them.</p>
+                            
+                            <p>If they were looking for an accounting software, there weren't great ways for them to find and compare tools.</p>
+                            
+                            <p>So what a full cycle sales rep could do is load up a list of Accounting Managers, send off emails through Outreach or Apollo and deliver their company approved template to every buyer.</p>
+                            
+                            <p>Without much knowledge or options, a manager would take the meeting to learn about the new software.</p>
+                            
+                            <p>This would keep a sales team's outbound engine running smoothly and their time could be spent on other tasks.</p>
+                            
+                            <p>Very little relevance or personalization was needed to start a conversation with prospects.</p>
+                            
+                            <p>With the onset of data companies like Apollo, ZoomInfo, Seamless, LeadIQ etc. Now every company in the world could unlock LinkedIn data and fire off emails to everyone in their market.</p>
+                            
+                            <p>A new approach is necessary.</p>
+                        </div>
+                        
+                        <div class="comparison-column today">
+                            <h4>Building Lists Today</h4>
+                            <p>Today it's not as simple as uploading a list of prospects from a database into an email automation tool.</p>
+                            
+                            <p>You need to think critically about the perfect type of prospect for your business.</p>
+                            
+                            <p>Your business likely isn't the right fit for every possible prospect in your market. The more precise you can be with targeting your ideal customers, the higher conversion rate you'll see in your outbound campaigns.</p>
+                            
+                            <p>By using custom data collection strategies focused on surfacing personalization data rather than just contact information, Growth Engine X can truly narrow in on the best possible prospects for your business.</p>
+                            
+                            <p>Taking this approach prevents you from burning through every prospect in your target market with low response rates - it's a powerful way to ensure you're connecting with the right people in the right way.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Adding Step 3 of the Methodology -->
+        <section class="methodology step-3">
+            <div class="container">
+                <h3 class="step-title">Step 3: What do you even say?</h3>
+                
+                <div class="video-container">
+                    <div class="video-placeholder">
+                        <div class="video-inner">
+                            <div class="play-button">
+                                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="40" cy="40" r="39" stroke="#6FF394" stroke-width="2"/>
+                                    <path d="M55 40L32.5 52.9904L32.5 27.0096L55 40Z" fill="#6FF394"/>
+                                </svg>
+                            </div>
+                            <div class="video-title">
+                                Sales Outreach Email Example
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-note">
+                        <p>Note: This is a prospect we sent an email to on behalf of one of our customers. They loved our copywriting so much, they made a 5 minute video and a LinkedIn post about it. Check it out.</p>
+                    </div>
+                </div>
+                
+                <div class="methodology-comparison">
+                    <div class="comparison-columns">
+                        <div class="comparison-column past">
+                            <h4>Your Dad's Cold Email Template</h4>
+                            <p>As you get to this step, you probably know generally what I'm going to say and can even harken back to how cold email outreach used to sound at one of your prior organizations.</p>
+                            
+                            <p>The subject lines were exploding with language like, "Don't hire another VP until you read this!" and the body of the email was filled with 2-3 paragraphs of copywriting explaining all of the widgets and features that come with your product or service.</p>
+                            
+                            <p>Again, because information was not readily available, this was often the only information a prospect could find about a solution to one of their problems.</p>
+                            
+                            <p>Today, this doesn't work because information is everywhere. Everyone is sequencing the same Hey {{First Name}} with a templated message that follows.</p>
+                            
+                            <p>No one is replying because you have nothing good to say to them.</p>
+                        </div>
+                        
+                        <div class="comparison-column today">
+                            <h4>Data Empowered Copywriting</h4>
+                            <p>Now we have data to leverage in order to write far better emails. Emails under 75 words get the most responses. Interest based calls to action out perform "book a call on my calendar" type calls to action by a factor of 5. Speaking to prospect's with a 5th grade reading level increases response by 32%.</p>
+                            
+                            <p>Using subject lines that look like a customer or colleague sent them an email (without lying of course) increases responses by 47%.</p>
+                            
+                            <p>Adding personalizations based on their LinkedIn profile and their website as simple as calling out when they started at their role again increases responses by a factor of 5. Not to mention all of the data that we gathered in step 2 that we can leverage in our outreach as well.</p>
+                            
+                            <p>Check out our copywriting training on YouTube for more but I hope I made the point that we don't need to blindly be writing emails anymore. There are frameworks and guidelines that we write all of our first drafts under for our clients in order to increase the odds of success.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="case-studies" class="case-studies">
+            <div class="container">
+                <h2>Case Studies</h2>
+                <div class="case-studies-grid">
+                    <div class="case-study-card">
+                        <div class="case-study-logo">
+                            <div class="logo-placeholder">Instantly.ai</div>
+                        </div>
+                        <div class="case-study-content">
+                            <h3 style="color: var(--color-primary);">Instantly.ai</h3>
+                            <ul>
+                                <li>Developed creative data targeting approaches</li>
+                                <li>Delivered 12-15 interested prospects per day</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="case-study-card">
+                        <div class="case-study-logo">
+                            <div class="logo-placeholder">Secureframe</div>
+                        </div>
+                        <div class="case-study-content">
+                            <h3 style="color: var(--color-primary);">Secureframe</h3>
+                            <ul>
+                                <li>Increased open rates from 7-15% to 69.7%</li>
+                                <li>Improved email deliverability significantly</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="case-study-card">
+                        <div class="case-study-logo">
+                            <div class="logo-placeholder">Website Closers</div>
+                        </div>
+                        <div class="case-study-content">
+                            <h3 style="color: var(--color-primary);">Website Closers</h3>
+                            <ul>
+                                <li>Built repeatable data collection strategy</li>
+                                <li>Created predictable pipeline for sales team</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="case-study-card">
+                        <div class="case-study-logo">
+                            <div class="logo-placeholder">Bequest Fund</div>
+                        </div>
+                        <div class="case-study-content">
+                            <h3 style="color: var(--color-primary);">Bequest Income Fund</h3>
+                            <ul>
+                                <li>Overcame spam issues for financial messaging</li>
+                                <li>Provides ongoing leads for 6 salespeople</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <h2>About Growth Engine X</h2>
+                    <p>Growth Engine X was founded by Eric Nowoslawski after working with 32 different startups at a tech incubator. He developed this methodology after finding that traditional sales approaches worked but couldn't scale effectively.</p>
+                    <p>Our data-driven, personalized approach ensures that your emails bypass spam filters, your messages are relevant to each prospect, and your campaigns produce consistent, predictable results.</p>
+                </div>
+                <div class="founder-image">
+                    <div class="image-wrapper">
+                        <img src="images/team/eric-instantly.jpeg" alt="Eric Nowoslawski with Instantly.ai" class="testimonial-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <p><strong>Address:</strong> 56 Donaldson Avenue, Rutherford, NJ 07070</p>
+                        <p><strong>Email:</strong> eric@growthenginex.com</p>
+                        <div class="social-links">
+                            <a href="http://www.linkedin.com/in/outboundphd" target="_blank" class="social-link">LinkedIn</a>
+                            <a href="https://www.youtube.com/channel/UC6ef5yDFz7gm8rARwX3HaDw" target="_blank" class="social-link">YouTube</a>
+                            <a href="https://twitter.com/ENowoslawski" target="_blank" class="social-link">Twitter</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2023 Growth Engine X. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#services">Services</a>
+                    <a href="#methodology">Methodology</a>
+                    <a href="#case-studies">Case Studies</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // Immediate execution inline script for stats animation
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded - inline script executing');
+            
+            // Animation function using modern techniques
+            function animateStatNumbers() {
+                const statNumbers = document.querySelectorAll('.stat-number');
+                let hasAnimated = false;
+                
+                // The animation function that will be applied to each number
+                function startCountUp(element, targetValue) {
+                    console.log('Starting count up for:', targetValue);
+                    const duration = 1500; // milliseconds
+                    const formatter = new Intl.NumberFormat('en-US');
+                    let startTime = null;
+                    
+                    function step(timestamp) {
+                        if (!startTime) startTime = timestamp;
+                        const progress = Math.min((timestamp - startTime) / duration, 1);
+                        const easedProgress = 1 - Math.pow(1 - progress, 4); // easeOutQuart
+                        const currentValue = Math.floor(easedProgress * targetValue);
+                        
+                        element.textContent = formatter.format(currentValue);
+                        
+                        if (progress < 1) {
+                            window.requestAnimationFrame(step);
+                        }
+                    }
+                    
+                    window.requestAnimationFrame(step);
+                }
+                
+                // Function to check if element is in viewport
+                function isInViewport(element) {
+                    const rect = element.getBoundingClientRect();
+                    return (
+                        rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.9
+                    );
+                }
+                
+                // Check if stats section is visible and trigger animation
+                function checkScroll() {
+                    if (hasAnimated) return;
+                    
+                    const statsSection = document.querySelector('.stats-section');
+                    if (!statsSection) {
+                        console.error('Stats section not found');
+                        return;
+                    }
+                    
+                    if (isInViewport(statsSection)) {
+                        console.log('Stats section in viewport, animating numbers');
+                        hasAnimated = true;
+                        
+                        statNumbers.forEach((statNumber) => {
+                            const targetValue = parseInt(statNumber.getAttribute('data-target'), 10);
+                            if (!isNaN(targetValue)) {
+                                startCountUp(statNumber, targetValue);
+                            } else {
+                                console.error('Invalid data-target value:', statNumber);
+                            }
+                        });
+                        
+                        // Remove scroll listener once animated
+                        window.removeEventListener('scroll', checkScroll);
+                    }
+                }
+                
+                // Listen for scroll events
+                window.addEventListener('scroll', checkScroll);
+                
+                // Check immediately in case stats are already visible
+                setTimeout(checkScroll, 300); // Small delay to ensure everything is loaded
+            }
+            
+            // Run animation setup
+            animateStatNumbers();
+        });
+        
+        // Also execute immediately in case DOMContentLoaded already fired
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            console.log('Document already ready, executing inline script immediately');
+            setTimeout(function() {
+                const statNumbers = document.querySelectorAll('.stat-number');
+                statNumbers.forEach((statNumber) => {
+                    const targetValue = parseInt(statNumber.getAttribute('data-target'), 10);
+                    console.log('Found stat number with target:', targetValue);
+                    if (!isNaN(targetValue)) {
+                        const duration = 1500; // milliseconds
+                        const formatter = new Intl.NumberFormat('en-US');
+                        let startTime = null;
+                        
+                        function step(timestamp) {
+                            if (!startTime) startTime = timestamp;
+                            const progress = Math.min((timestamp - startTime) / duration, 1);
+                            const easedProgress = 1 - Math.pow(1 - progress, 4); // easeOutQuart
+                            const currentValue = Math.floor(easedProgress * targetValue);
+                            
+                            statNumber.textContent = formatter.format(currentValue);
+                            
+                            if (progress < 1) {
+                                window.requestAnimationFrame(step);
+                            }
+                        }
+                        
+                        window.requestAnimationFrame(step);
+                    }
+                });
+            }, 500);
+        }
+    </script>
+    
+    <!-- Keep just the final diagnostics script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('===== FINAL DIAGNOSTICS =====');
+            
+            // Check all get-started-btn elements
+            const buttons = document.querySelectorAll('.get-started-btn');
+            console.log(`Found ${buttons.length} buttons with class .get-started-btn`);
+            
+            buttons.forEach((btn, index) => {
+                const rect = btn.getBoundingClientRect();
+                const styles = getComputedStyle(btn);
+                
+                console.log(`Button ${index + 1}:`);
+                console.log(`- Text: "${btn.textContent.trim()}"`);
+                console.log(`- Position: x:${Math.round(rect.x)}, y:${Math.round(rect.y)}, width:${Math.round(rect.width)}, height:${Math.round(rect.height)}`);
+                console.log(`- Visibility: display=${styles.display}, visibility=${styles.visibility}, opacity=${styles.opacity}`);
+                console.log(`- Styling: background=${styles.backgroundColor}, z-index=${styles.zIndex}`);
+                
+                // Check if button appears to be hidden or not displayed
+                if (rect.width === 0 || rect.height === 0 || styles.display === 'none' || styles.visibility === 'hidden' || styles.opacity === '0') {
+                    console.error(`⚠️ Button ${index + 1} appears to be hidden or not displayed correctly!`);
+                } else {
+                    console.log(`✅ Button ${index + 1} appears to be displayed correctly.`);
+                }
+            });
+            
+            console.log('===== END DIAGNOSTICS =====');
+        });
+    </script>
+    
+    <!-- Interactive effects for ICP diagram -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all elements that need hover effects
+            const icpDiagram = document.querySelector('.icp-diagram');
+            if (!icpDiagram) return;
+            
+            // Interactive elements
+            const outerCircle = icpDiagram.querySelector('.outer-circle');
+            const middleCircle = icpDiagram.querySelector('.middle-circle');
+            const innerCircle = icpDiagram.querySelector('.inner-circle');
+            const pulseEffect = icpDiagram.querySelector('.pulse-effect');
+            const floatingParticles = icpDiagram.querySelectorAll('.floating-particle');
+            
+            // Add hover effects to circles
+            function addHoverEffects(element, circleType) {
+                if (!element) return;
+                
+                element.addEventListener('mouseenter', function() {
+                    // Enhance glow on hover
+                    switch(circleType) {
+                        case 'outer':
+                            this.setAttribute('stroke-width', '2');
+                            this.setAttribute('stroke-opacity', '1');
+                            break;
+                        case 'middle':
+                            this.setAttribute('stroke-width', '2');
+                            this.setAttribute('stroke-opacity', '1');
+                            break;
+                        case 'inner':
+                            this.setAttribute('stroke-width', '3');
+                            if (pulseEffect) {
+                                pulseEffect.setAttribute('opacity', '0.6');
+                                // Speed up pulse animation
+                                const pulseAnimate = pulseEffect.querySelector('animate');
+                                if (pulseAnimate) {
+                                    pulseAnimate.setAttribute('dur', '2s');
+                                }
+                            }
+                            break;
+                    }
+                    
+                    // Brighten particles on any circle hover
+                    floatingParticles.forEach(particle => {
+                        particle.setAttribute('opacity', '0.7');
+                    });
+                });
+                
+                element.addEventListener('mouseleave', function() {
+                    // Restore original state
+                    switch(circleType) {
+                        case 'outer':
+                            this.setAttribute('stroke-width', '1.5');
+                            break;
+                        case 'middle':
+                            this.setAttribute('stroke-width', '1.5');
+                            break;
+                        case 'inner':
+                            this.setAttribute('stroke-width', '2');
+                            if (pulseEffect) {
+                                pulseEffect.setAttribute('opacity', '0.3');
+                                // Restore pulse animation speed
+                                const pulseAnimate = pulseEffect.querySelector('animate');
+                                if (pulseAnimate) {
+                                    pulseAnimate.setAttribute('dur', '4s');
+                                }
+                            }
+                            break;
+                    }
+                    
+                    // Restore particles
+                    floatingParticles.forEach(particle => {
+                        particle.setAttribute('opacity', '0.4');
+                    });
+                });
+            }
+            
+            // Add hover effects to each circle
+            addHoverEffects(outerCircle, 'outer');
+            addHoverEffects(middleCircle, 'middle');
+            addHoverEffects(innerCircle, 'inner');
+            
+            // Add parallax effect - subtle movement following cursor
+            icpDiagram.addEventListener('mousemove', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width;
+                const y = (e.clientY - rect.top) / rect.height;
+                
+                // Calculate offset position (between -3 and 3 pixels)
+                const offsetX = (x - 0.5) * 6;
+                const offsetY = (y - 0.5) * 6;
+                
+                // Apply parallax effect to floating particles with different depths
+                floatingParticles.forEach((particle, index) => {
+                    const depth = 0.5 + (index % 3) * 0.5; // Vary depths between particles
+                    particle.style.transform = `translate(${offsetX * depth}px, ${offsetY * depth}px)`;
+                });
+                
+                // Subtle movement to inner circle
+                if (innerCircle) {
+                    innerCircle.style.transform = `translate(${offsetX * 0.2}px, ${offsetY * 0.2}px)`;
+                }
+                
+                // Even more subtle movement to pulse effect
+                if (pulseEffect) {
+                    pulseEffect.style.transform = `translate(${offsetX * 0.3}px, ${offsetY * 0.3}px)`;
+                }
+            });
+            
+            // Reset transforms when mouse leaves diagram
+            icpDiagram.addEventListener('mouseleave', function() {
+                floatingParticles.forEach(particle => {
+                    particle.style.transform = 'translate(0, 0)';
+                });
+                
+                if (innerCircle) {
+                    innerCircle.style.transform = 'translate(0, 0)';
+                }
+                
+                if (pulseEffect) {
+                    pulseEffect.style.transform = 'translate(0, 0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

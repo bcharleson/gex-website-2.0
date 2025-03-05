@@ -1,0 +1,129 @@
+/**
+ * Rive Animations Styles
+ * Custom styling for Rive animation containers and interactions
+ */
+
+/* Base styles for all Rive animation containers */
+[id$="-rive-container"] {
+  position: relative;
+  overflow: visible;
+  z-index: 0;
+}
+
+/* Glowing button container */
+#glowing-button-container {
+  width: 200px;
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+/* Animation containers for the buttons */
+#nav-button-animation,
+#hero-button-animation {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  z-index: 5;
+}
+
+/* Canvas elements - positioned behind the buttons */
+#nav-button-canvas,
+#hero-button-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+/* Button styling - make visible by default */
+.get-started-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 25px;
+  background-color: #6FF394 !important;
+  color: #000000 !important;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  z-index: 10;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(111, 243, 148, 0.25);
+}
+
+/* Hover effect for buttons */
+.get-started-btn:hover {
+  background-color: #5AE081 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(111, 243, 148, 0.4);
+}
+
+/* Container styling */
+.get-started-container {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Button text styling */
+.button-text {
+  position: relative;
+  z-index: 10;
+  font-weight: 600;
+  color: #000000;
+}
+
+/* General Rive animation styling */
+.rive-animation-wrapper {
+  position: relative;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+}
+
+.rive-fullwidth {
+  width: 100%;
+  height: auto;
+}
+
+.rive-interactive {
+  cursor: pointer;
+}
+
+.rive-interactive:hover {
+  opacity: 0.9;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  #glowing-button-container {
+    width: 150px;
+    height: 45px;
+  }
+  
+  .rive-animation-wrapper {
+    max-width: 100%;
+  }
+  
+  #nav-button-animation,
+  #hero-button-animation {
+    width: 120px;
+    height: 35px;
+  }
+  
+  .get-started-btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+} 

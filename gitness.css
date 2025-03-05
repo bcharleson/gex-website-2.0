@@ -1,0 +1,285 @@
+:root {
+    --color-bg: #0A0E14;
+    --color-text: #FFFFFF;
+    --color-accent: #5CC7C0;  /* Replacing green with teal/blue color */
+    --color-error: #FF6B6B;
+    --color-success: #5CC7C0;  /* Using teal for success indicators instead of green */
+    --color-primary: #6FF394;
+    --color-background: #0D1117;
+    --color-dark-gray: #1A1E24;
+    --color-light-gray: rgba(255, 255, 255, 0.6);
+    --color-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+.wrapper {
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Header Styles */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 1.5rem 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--color-primary);
+}
+
+.star-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+.star-link:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.get-started-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    background-color: transparent;
+    border: 1px solid var(--color-text);
+    color: var(--color-text) !important;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.get-started-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.hero-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10rem 1.5rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.hero-content .get-started-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Terminal Section */
+.hero-terminal {
+    background-color: var(--color-dark-gray);
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 400px;
+    border: 1px solid var(--color-border);
+}
+
+.terminal-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.terminal-item:last-child {
+    border-bottom: none;
+}
+
+.terminal-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.terminal-text {
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: var(--color-primary);
+}
+
+/* Companies Section */
+.hero-companies {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.hero-companies p {
+    color: var(--color-light-gray);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.company-logos {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.logo-placeholder {
+    color: var(--color-light-gray);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.logo-placeholder:hover {
+    opacity: 1;
+    color: var(--color-primary);
+}
+
+.company-logos img {
+    height: 30px;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.company-logos img:hover {
+    opacity: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-terminal {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        gap: 1rem;
+    }
+    
+    .star-link {
+        display: none;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    nav ul {
+        gap: 0.5rem;
+    }
+    
+    nav a {
+        font-size: 0.9rem;
+    }
+    
+    .hero-content .get-started-btn {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+} 
