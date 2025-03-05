@@ -1852,7 +1852,6 @@ img[src*="Forbes.webp"].partner-logo {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-    transform: scale(1.02);
 }
 
 .methodology.step-3 .comparison-columns {
