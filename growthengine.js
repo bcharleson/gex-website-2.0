@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
             window.removeEventListener('scroll', startAnimation);
-            console.log('Animation started');
         }
     }
 
@@ -74,21 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
 statsAnimation.init();
 document.addEventListener('DOMContentLoaded', () => statsAnimation.init());
 
-console.log('%cGrowth Engine X: Interactive effects initialized', 'color: #6FF394; font-size: 14px; font-weight: bold;');
-
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('%c Growth Engine X: Interactive effects initialized', 'background: #6FF394; color: black; padding: 4px; border-radius: 4px;');
-    
     // Initialize DOM elements
     const header = document.querySelector('header');
     const heroSection = document.querySelector('.hero');
     const terminalCards = document.querySelectorAll('.terminal-card');
-    
-    console.log('Found elements:', {
-        header: !!header,
-        heroSection: !!heroSection,
-        terminalCards: terminalCards.length
-    });
     
     // Sticky header functionality
     function updateHeader() {

@@ -5,8 +5,6 @@
 
 // Rive animations are initialized when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("DOM loaded - initializing buttons and animations");
-    
     // Always make buttons visible first, regardless of animation loading
     makeButtonsVisible();
     
@@ -14,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         // Only try to load animations if Rive is available
         if (typeof rive === 'undefined') {
-            console.warn("Rive library not available - using standard buttons");
             return;
         }
         initRiveAnimations();
@@ -26,21 +23,17 @@ function checkAnimationFilesExist() {
     return fetch('/assets/animations/button.riv')
         .then(response => {
             if (!response.ok) {
-                console.warn(`Animation file not found (${response.status}) - using standard buttons`);
                 return false;
             }
             return true;
         })
         .catch(error => {
-            console.warn("Failed to check animation file:", error);
             return false;
         });
 }
 
 // This function runs immediately to ensure buttons are visible
 function makeButtonsVisible() {
-    console.log("Making buttons visible as failsafe");
-    
     // Style nav button
     const navButtonElement = document.querySelector('#nav-button-animation .get-started-btn');
     if (navButtonElement) {
@@ -48,9 +41,6 @@ function makeButtonsVisible() {
         navButtonElement.style.opacity = '1';
         navButtonElement.style.visibility = 'visible';
         navButtonElement.style.backgroundColor = '#6FF394';
-        console.log("Nav button made visible");
-    } else {
-        console.warn("Nav button element not found");
     }
     
     // Style hero button
@@ -60,19 +50,13 @@ function makeButtonsVisible() {
         heroButtonElement.style.opacity = '1';
         heroButtonElement.style.visibility = 'visible';
         heroButtonElement.style.backgroundColor = '#6FF394';
-        console.log("Hero button made visible");
-    } else {
-        console.warn("Hero button element not found");
     }
 }
 
 // Initialize both button animations if files exist
 function initRiveAnimations() {
-    console.log("Initializing Rive animations");
-    
     checkAnimationFilesExist().then(filesExist => {
         if (!filesExist) {
-            console.log("Animation files don't exist, using standard buttons");
             return;
         }
         
@@ -81,7 +65,7 @@ function initRiveAnimations() {
             initNavButtonAnimation();
             initHeroButtonAnimation();
         } catch (e) {
-            console.error("Error initializing animations:", e);
+            // Silent fail, standard buttons are already visible as fallback
         }
     });
 }
@@ -90,18 +74,14 @@ function initRiveAnimations() {
  * Initialize the nav button animation
  */
 function initNavButtonAnimation() {
-    console.log('Initializing nav button animation');
-    
     try {
         const navCanvas = document.getElementById('nav-button-canvas');
         if (!navCanvas) {
-            console.warn('Nav button canvas not found');
             return false;
         }
         
         const navBtn = document.querySelector('#nav-button-animation .get-started-btn');
         if (!navBtn) {
-            console.warn('Nav button element not found');
             return false;
         }
         
@@ -112,8 +92,6 @@ function initNavButtonAnimation() {
             autoplay: true,
             stateMachines: 'State Machine 1',
             onLoad: () => {
-                console.log('Nav button animation loaded');
-                
                 // Add hover effect
                 const navStateMachineInputs = navRive.stateMachineInputs('State Machine 1');
                 if (navStateMachineInputs) {
@@ -130,14 +108,12 @@ function initNavButtonAnimation() {
                 }
             },
             onError: (err) => {
-                console.error('Nav button animation error:', err);
                 return false;
             }
         });
         
         return true;
     } catch (error) {
-        console.error('Error in nav button animation:', error);
         return false;
     }
 }
@@ -146,18 +122,14 @@ function initNavButtonAnimation() {
  * Initialize the hero button animation
  */
 function initHeroButtonAnimation() {
-    console.log('Initializing hero button animation');
-    
     try {
         const heroCanvas = document.getElementById('hero-button-canvas');
         if (!heroCanvas) {
-            console.warn('Hero button canvas not found');
             return false;
         }
         
         const heroBtn = document.querySelector('#hero-button-animation .get-started-btn');
         if (!heroBtn) {
-            console.warn('Hero button element not found');
             return false;
         }
         
@@ -168,8 +140,6 @@ function initHeroButtonAnimation() {
             autoplay: true,
             stateMachines: 'State Machine 1',
             onLoad: () => {
-                console.log('Hero button animation loaded');
-                
                 // Add hover effect
                 const heroStateMachineInputs = heroRive.stateMachineInputs('State Machine 1');
                 if (heroStateMachineInputs) {
@@ -186,11 +156,9 @@ function initHeroButtonAnimation() {
                 }
             },
             onError: (err) => {
-                console.error('Hero button animation error:', err);
                 return false;
             },
             onLoadError: (err) => {
-                console.error('Failed to load hero button animation:', err);
                 // Make just this button visible as fallback
                 const buttonElement = document.querySelector('#hero-button-animation .get-started-btn');
                 if (buttonElement) {
@@ -203,7 +171,6 @@ function initHeroButtonAnimation() {
         
         return true;
     } catch (error) {
-        console.error('Failed to initialize hero button animation:', error);
         return false;
     }
 } 

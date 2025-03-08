@@ -725,8 +725,6 @@
     <script>
         // Immediate execution inline script for stats animation
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM loaded - inline script executing');
-            
             // Animation function using modern techniques
             function animateStatNumbers() {
                 const statNumbers = document.querySelectorAll('.stat-number');
@@ -734,7 +732,6 @@
                 
                 // The animation function that will be applied to each number
                 function startCountUp(element, targetValue) {
-                    console.log('Starting count up for:', targetValue);
                     const duration = 1500; // milliseconds
                     const formatter = new Intl.NumberFormat('en-US');
                     let startTime = null;
@@ -769,20 +766,16 @@
                     
                     const statsSection = document.querySelector('.stats-section');
                     if (!statsSection) {
-                        console.error('Stats section not found');
                         return;
                     }
                     
                     if (isInViewport(statsSection)) {
-                        console.log('Stats section in viewport, animating numbers');
                         hasAnimated = true;
                         
                         statNumbers.forEach((statNumber) => {
                             const targetValue = parseInt(statNumber.getAttribute('data-target'), 10);
                             if (!isNaN(targetValue)) {
                                 startCountUp(statNumber, targetValue);
-                            } else {
-                                console.error('Invalid data-target value:', statNumber);
                             }
                         });
                         
@@ -804,12 +797,10 @@
         
         // Also execute immediately in case DOMContentLoaded already fired
         if (document.readyState === 'complete' || document.readyState === 'interactive') {
-            console.log('Document already ready, executing inline script immediately');
             setTimeout(function() {
                 const statNumbers = document.querySelectorAll('.stat-number');
                 statNumbers.forEach((statNumber) => {
                     const targetValue = parseInt(statNumber.getAttribute('data-target'), 10);
-                    console.log('Found stat number with target:', targetValue);
                     if (!isNaN(targetValue)) {
                         const duration = 1500; // milliseconds
                         const formatter = new Intl.NumberFormat('en-US');
@@ -833,37 +824,6 @@
                 });
             }, 500);
         }
-    </script>
-    
-    <!-- Keep just the final diagnostics script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('===== FINAL DIAGNOSTICS =====');
-            
-            // Check all get-started-btn elements
-            const buttons = document.querySelectorAll('.get-started-btn');
-            console.log(`Found ${buttons.length} buttons with class .get-started-btn`);
-            
-            buttons.forEach((btn, index) => {
-                const rect = btn.getBoundingClientRect();
-                const styles = getComputedStyle(btn);
-                
-                console.log(`Button ${index + 1}:`);
-                console.log(`- Text: "${btn.textContent.trim()}"`);
-                console.log(`- Position: x:${Math.round(rect.x)}, y:${Math.round(rect.y)}, width:${Math.round(rect.width)}, height:${Math.round(rect.height)}`);
-                console.log(`- Visibility: display=${styles.display}, visibility=${styles.visibility}, opacity=${styles.opacity}`);
-                console.log(`- Styling: background=${styles.backgroundColor}, z-index=${styles.zIndex}`);
-                
-                // Check if button appears to be hidden or not displayed
-                if (rect.width === 0 || rect.height === 0 || styles.display === 'none' || styles.visibility === 'hidden' || styles.opacity === '0') {
-                    console.error(`⚠️ Button ${index + 1} appears to be hidden or not displayed correctly!`);
-                } else {
-                    console.log(`✅ Button ${index + 1} appears to be displayed correctly.`);
-                }
-            });
-            
-            console.log('===== END DIAGNOSTICS =====');
-        });
     </script>
     
     <!-- Interactive effects for ICP diagram -->
